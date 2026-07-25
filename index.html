@@ -1,79 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Test Page</title>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4879216117539781"
-     crossorigin="anonymous"></script>
+
+<title>Roblox Games</title>
+
+<!-- Google AdSense Loader -->
+<script async 
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4879216117539781"
+crossorigin="anonymous"></script>
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
 body{
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-4879216117539781">
-</amp-auto-ads>
-    overflow:hidden;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#020617);
-    background-size:400% 400%;
-    animation:bg 10s infinite alternate;
-    font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#020617,#111827,#064e3b);
+color:white;
+min-height:100vh;
 }
-@keyframes bg{
-    from{background-position:left;}
-    to{background-position:right;}
+
+
+header{
+text-align:center;
+padding:35px;
+background:linear-gradient(90deg,#00ffd5,#0066ff);
+color:black;
 }
-.container{
-    text-align:center;
+
+
+header h1{
+font-size:50px;
+animation:pulse 2s infinite;
 }
-h1{
-    color:white;
-    font-size:50px;
-    text-shadow:0 0 15px cyan;
-    animation:pulse 2s infinite;
-}
-p{
-    color:#ccc;
-    margin-top:10px;
-}
+
+
 @keyframes pulse{
-    50%{transform:scale(1.08);}
+50%{
+transform:scale(1.05);
 }
+}
+
+
+header p{
+font-size:18px;
+}
+
+
+
+.search{
+text-align:center;
+padding:25px;
+}
+
+
+.search input{
+width:80%;
+max-width:500px;
+padding:15px;
+border-radius:30px;
+border:none;
+font-size:18px;
+}
+
+
+
 .ad-box{
-    margin-top:30px;
-    width:320px;
-    height:100px;
-    border:2px dashed cyan;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:12px;
-    box-shadow:0 0 15px cyan;
+
+margin:20px auto;
+width:320px;
+height:100px;
+border:2px dashed cyan;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:15px;
+color:#aaa;
+
 }
+
+
+
+.container{
+
+padding:25px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+
+
+.card{
+
+background:#111827;
+
+padding:25px;
+
+border-radius:25px;
+
+border:1px solid #334155;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:0 0 25px cyan;
+
+}
+
+
+
+.card h2{
+
+color:#00ffd5;
+
+}
+
+
+
+button{
+
+margin-top:15px;
+
+padding:12px 25px;
+
+border:none;
+
+border-radius:30px;
+
+background:#00ffd5;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 15px cyan;
+
+}
+
+
+
+/* Background overlay */
+
+.overlay{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:#0009;
+
+z-index:5;
+
+}
+
+
+
+/* Popup */
+
+#info{
+
+display:none;
+
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+background:#111827;
+
+width:85%;
+
+max-width:600px;
+
+padding:35px;
+
+border-radius:30px;
+
+box-shadow:0 0 50px cyan;
+
+z-index:10;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+
+#info.show{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+
+#title{
+
+color:#00ffd5;
+
+font-size:35px;
+
+}
+
+
+#desc{
+
+margin-top:20px;
+
+line-height:1.6;
+
+color:#ddd;
+
+}
+
+
 </style>
+
 </head>
+
+
 <body>
 
-<div class="container">
-<h1>🚀 Welcome to My Test Page</h1>
-<p>Enjoy the animated background!</p>
+
+<header>
+
+<h1>🎮 Roblox Games</h1>
+
+<p>Explore the best Roblox experiences</p>
+
+</header>
+
+
+<div class="search">
+
+<input id="search" placeholder="Search games..." onkeyup="searchGames()">
+
+</div>
+
 
 <div class="ad-box">
-Your Google AdSense ad will appear here
+Your AdSense Ad Here
 </div>
 
-<!-- Replace the box above with your official Google AdSense code
-after your AdSense account is approved. -->
+
+<div class="container">
+
+
+<div class="card">
+<h2>🥇 #1 🌊 Blox Fruits</h2>
+<p>Adventure</p>
+<button onclick="show(0)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🥈 #2 🏠 Brookhaven RP</h2>
+<p>Roleplay</p>
+<button onclick="show(1)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🥉 #3 🐾 Adopt Me!</h2>
+<p>Simulation</p>
+<button onclick="show(2)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🏅 #4 🔪 Murder Mystery 2</h2>
+<p>Mystery</p>
+<button onclick="show(3)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🏅 #5 🚪 DOORS</h2>
+<p>Horror</p>
+<button onclick="show(4)">Learn More</button>
+</div>
+<div class="card">
+<h2>🏅 #6 ⚔️ BedWars</h2>
+<p>Battle</p>
+<button onclick="show(5)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🏅 #7 🚓 Jailbreak</h2>
+<p>Action</p>
+<button onclick="show(6)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🏅 #8 💪 Strongman Simulator</h2>
+<p>Simulator</p>
+<button onclick="show(7)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🏅 #9 🐷 Piggy</h2>
+<p>Survival</p>
+<button onclick="show(8)">Learn More</button>
+</div>
+
+
+<div class="card">
+<h2>🏅 #10 🚢 Build A Boat</h2>
+<p>Building</p>
+<button onclick="show(9)">Learn More</button>
+</div>
+
 
 </div>
+
+
+<div class="overlay" id="overlay"></div>
+
+
+<div id="info">
+
+<h1 id="title"></h1>
+
+<p id="desc"></p>
+
+<button onclick="closeBox()">❌ Close</button>
+
+</div>
+
+
+
+<script>
+
+
+let games=[
+
+[
+"Blox Fruits 🌊",
+"Explore islands, collect powerful fruits, fight enemies, unlock abilities and become stronger."
+],
+
+[
+"Brookhaven RP 🏠",
+"Create stories, customize your avatar, own houses, drive vehicles and hang out with friends."
+],
+
+[
+"Adopt Me! 🐾",
+"Collect pets, trade items, decorate homes and explore a friendly world."
+],
+
+[
+"Murder Mystery 2 🔪",
+"Find the murderer, protect yourself and survive the mystery round."
+],
+
+[
+"DOORS 🚪",
+"Explore mysterious rooms, solve challenges and survive scary creatures."
+],
+
+[
+"BedWars ⚔️",
+"Fight teams, protect your base and use different strategies to win."
+],
+
+[
+"Jailbreak 🚓",
+"Escape prison, become police or criminal and explore a huge city."
+],
+
+[
+"Strongman Simulator 💪",
+"Train strength, unlock new areas and become powerful."
+],
+
+[
+"Piggy 🐷",
+"Solve puzzles and escape dangerous situations."
+],
+
+[
+"Build A Boat 🚢",
+"Build creative boats, overcome obstacles and find treasure."
+]
+
+];
+
+
+
+function show(i){
+
+let box=document.getElementById("info");
+
+document.getElementById("title").innerHTML=games[i][0];
+
+document.getElementById("desc").innerHTML=
+games[i][1]+
+"<br><br>⭐ Rating: 4.8/5"+
+"<br>🎮 Multiplayer Experience"+
+"<br>🔥 Popular Roblox Game";
+
+
+document.getElementById("overlay").style.display="block";
+
+box.style.display="block";
+
+
+setTimeout(()=>{
+
+box.classList.add("show");
+
+},20);
+
+}
+
+
+
+function closeBox(){
+
+let box=document.getElementById("info");
+
+box.classList.remove("show");
+
+document.getElementById("overlay").style.display="none";
+
+
+setTimeout(()=>{
+
+box.style.display="none";
+
+},400);
+
+}
+
+
+
+document.getElementById("overlay").onclick=function(){
+
+closeBox();
+
+};
+
+
+
+function searchGames(){
+
+let value=document
+.getElementById("search")
+.value
+.toLowerCase();
+
+
+let cards=document.querySelectorAll(".card");
+
+
+cards.forEach(card=>{
+
+if(card.innerText.toLowerCase().includes(value)){
+
+card.style.display="block";
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+
+</script>
+
 
 </body>
 </html>
