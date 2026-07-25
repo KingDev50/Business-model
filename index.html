@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Test Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#020617);
+    background-size:400% 400%;
+    animation:bg 10s infinite alternate;
+    font-family:Arial,sans-serif;
+}
+@keyframes bg{
+    from{background-position:left;}
+    to{background-position:right;}
+}
+.container{
+    text-align:center;
+}
+h1{
+    color:white;
+    font-size:50px;
+    text-shadow:0 0 15px cyan;
+    animation:pulse 2s infinite;
+}
+p{
+    color:#ccc;
+    margin-top:10px;
+}
+@keyframes pulse{
+    50%{transform:scale(1.08);}
+}
+.ad-box{
+    margin-top:30px;
+    width:320px;
+    height:100px;
+    border:2px dashed cyan;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:12px;
+    box-shadow:0 0 15px cyan;
+}
+</style>
 </head>
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is my first website.</p>
+
+<div class="container">
+<h1>🚀 Welcome to My Test Page</h1>
+<p>Enjoy the animated background!</p>
+
+<div class="ad-box">
+Your Google AdSense ad will appear here
+</div>
+
+<!-- Replace the box above with your official Google AdSense code
+after your AdSense account is approved. -->
+
+</div>
+
 </body>
 </html>
