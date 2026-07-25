@@ -7,10 +7,11 @@
 
 <title>Roblox Games</title>
 
-<!-- Google AdSense Loader -->
+<!-- Google AdSense Auto Ads -->
 <script async 
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4879216117539781"
 crossorigin="anonymous"></script>
+
 
 <style>
 
@@ -76,7 +77,7 @@ font-size:18px;
 
 margin:20px auto;
 width:320px;
-height:100px;
+min-height:100px;
 border:2px dashed cyan;
 display:flex;
 align-items:center;
@@ -84,6 +85,13 @@ justify-content:center;
 border-radius:15px;
 color:#aaa;
 
+}
+
+
+/* Manual AdSense Ad */
+
+.adsbygoogle{
+margin:20px auto;
 }
 
 
@@ -117,7 +125,6 @@ text-align:center;
 transition:.3s;
 
 }
-
 
 
 .card:hover{
@@ -159,7 +166,6 @@ transition:.3s;
 }
 
 
-
 button:hover{
 
 transform:scale(1.1);
@@ -170,7 +176,7 @@ box-shadow:0 0 15px cyan;
 
 
 
-/* Background overlay */
+/* Popup */
 
 .overlay{
 
@@ -187,8 +193,6 @@ z-index:5;
 }
 
 
-
-/* Popup */
 
 #info{
 
@@ -249,7 +253,6 @@ color:#ddd;
 
 }
 
-
 </style>
 
 </head>
@@ -274,9 +277,17 @@ color:#ddd;
 </div>
 
 
-<div class="ad-box">
-Your AdSense Ad Here
-</div>
+<!-- Manual AdSense Ad -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-4879216117539781"
+data-ad-slot="YOUR_AD_SLOT_ID"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 
 <div class="container">
@@ -314,8 +325,7 @@ Your AdSense Ad Here
 <h2>🏅 #5 🚪 DOORS</h2>
 <p>Horror</p>
 <button onclick="show(4)">Learn More</button>
-</div>
-<div class="card">
+</div><div class="card">
 <h2>🏅 #6 ⚔️ BedWars</h2>
 <p>Battle</p>
 <button onclick="show(5)">Learn More</button>
@@ -375,12 +385,12 @@ let games=[
 
 [
 "Blox Fruits 🌊",
-"Explore islands, collect powerful fruits, fight enemies, unlock abilities and become stronger."
+"Explore islands, collect fruits, fight enemies and unlock powerful abilities."
 ],
 
 [
 "Brookhaven RP 🏠",
-"Create stories, customize your avatar, own houses, drive vehicles and hang out with friends."
+"Create stories, customize your avatar, own houses and play with friends."
 ],
 
 [
@@ -395,22 +405,22 @@ let games=[
 
 [
 "DOORS 🚪",
-"Explore mysterious rooms, solve challenges and survive scary creatures."
+"Explore mysterious rooms and survive scary creatures."
 ],
 
 [
 "BedWars ⚔️",
-"Fight teams, protect your base and use different strategies to win."
+"Protect your base, fight enemy teams and use strategies to win."
 ],
 
 [
 "Jailbreak 🚓",
-"Escape prison, become police or criminal and explore a huge city."
+"Escape prison, become police or criminal and explore the city."
 ],
 
 [
 "Strongman Simulator 💪",
-"Train strength, unlock new areas and become powerful."
+"Train your character, gain strength and unlock new areas."
 ],
 
 [
@@ -420,7 +430,7 @@ let games=[
 
 [
 "Build A Boat 🚢",
-"Build creative boats, overcome obstacles and find treasure."
+"Build creations, travel through obstacles and find treasure."
 ]
 
 ];
@@ -434,10 +444,10 @@ let box=document.getElementById("info");
 document.getElementById("title").innerHTML=games[i][0];
 
 document.getElementById("desc").innerHTML=
-games[i][1]+
-"<br><br>⭐ Rating: 4.8/5"+
-"<br>🎮 Multiplayer Experience"+
-"<br>🔥 Popular Roblox Game";
+games[i][1]
++"<br><br>⭐ Rating: 4.8/5"
++"<br>🎮 Multiplayer"
++"<br>🔥 Popular Roblox Experience";
 
 
 document.getElementById("overlay").style.display="block";
